@@ -1,0 +1,452 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#214a38">
+<title>Domeniu Cheile Turzii – Meniu</title>
+<style>
+:root{
+  --green:#214a38;
+  --green2:#173a2b;
+  --cream:#f5f0e6;
+  --paper:#fffdf8;
+  --gold:#b88a3b;
+  --text:#242424;
+  --muted:#6b6b65;
+  --line:#e5dccd;
+  --shadow:0 8px 24px rgba(25,45,35,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--cream);
+  color:var(--text);
+}
+header{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:linear-gradient(135deg,var(--green2),var(--green));
+  color:#fff;
+  box-shadow:0 4px 14px rgba(0,0,0,.18);
+}
+.hero{
+  max-width:1000px;
+  margin:auto;
+  padding:18px 16px 12px;
+  text-align:center;
+}
+.brand{
+  font-family:Georgia,serif;
+  font-size:clamp(28px,6vw,48px);
+  letter-spacing:.04em;
+  margin:0;
+}
+.subtitle{
+  margin:5px 0 12px;
+  color:#ead9b7;
+  font-size:14px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.controls{
+  display:flex;
+  gap:8px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+button,.search{
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:999px;
+}
+.lang{
+  background:rgba(255,255,255,.10);
+  color:#fff;
+  padding:9px 14px;
+  font-weight:700;
+  cursor:pointer;
+}
+.lang.active{background:#fff;color:var(--green2)}
+.searchbar{
+  max-width:1000px;
+  margin:auto;
+  padding:0 16px 14px;
+}
+.search{
+  width:100%;
+  padding:12px 15px;
+  background:#fff;
+  color:#222;
+  font-size:16px;
+  outline:none;
+}
+nav{
+  background:#fff;
+  border-bottom:1px solid var(--line);
+  overflow:auto;
+  white-space:nowrap;
+  position:sticky;
+  top:156px;
+  z-index:15;
+}
+.nav-inner{
+  max-width:1000px;
+  margin:auto;
+  display:flex;
+  gap:6px;
+  padding:9px 12px;
+}
+nav a{
+  text-decoration:none;
+  color:var(--green2);
+  background:#f8f4ec;
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:8px 12px;
+  font-weight:700;
+  font-size:14px;
+}
+main{
+  max-width:1000px;
+  margin:auto;
+  padding:18px 14px 50px;
+}
+.category{
+  scroll-margin-top:220px;
+  margin:0 0 22px;
+}
+.category h2{
+  font-family:Georgia,serif;
+  color:var(--green2);
+  margin:0 0 12px;
+  font-size:clamp(25px,5vw,34px);
+  border-bottom:2px solid var(--gold);
+  padding-bottom:7px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+.card{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:14px;
+  box-shadow:var(--shadow);
+}
+.card-top{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+}
+.name{
+  font-size:18px;
+  line-height:1.25;
+  font-weight:800;
+  flex:1;
+}
+.price{
+  color:var(--green2);
+  font-family:Georgia,serif;
+  font-size:23px;
+  line-height:1;
+  white-space:nowrap;
+  font-weight:700;
+}
+.meta{
+  color:var(--gold);
+  font-size:13px;
+  font-weight:700;
+  margin-top:5px;
+}
+.desc{
+  margin-top:8px;
+  color:var(--muted);
+  line-height:1.4;
+  font-size:14px;
+}
+.note{
+  background:#fff7df;
+  border-left:4px solid var(--gold);
+  border-radius:10px;
+  padding:12px 14px;
+  margin-bottom:14px;
+}
+.allergens{
+  background:var(--green2);
+  color:#fff;
+  border-radius:14px;
+  padding:18px;
+  box-shadow:var(--shadow);
+}
+.allergens ol{
+  margin:10px 0 0;
+  padding-left:23px;
+  line-height:1.55;
+}
+footer{
+  background:var(--green2);
+  color:#fff;
+  text-align:center;
+  padding:24px 15px;
+}
+.hidden{display:none!important}
+@media(max-width:720px){
+  .grid{grid-template-columns:1fr}
+  nav{top:164px}
+  .card{padding:13px}
+  .name{font-size:17px}
+  .price{font-size:21px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="hero">
+    <h1 class="brand">DOMENIU</h1>
+    <div class="subtitle">Cheile Turzii · Meniu digital</div>
+    <div class="controls">
+      <button class="lang active" data-lang="ro">🇷🇴 Română</button>
+      <button class="lang" data-lang="en">🇬🇧 English</button>
+      <button class="lang" data-lang="hu">🇭🇺 Magyar</button>
+    </div>
+  </div>
+  <div class="searchbar">
+    <input id="search" class="search" type="search" placeholder="Caută un produs...">
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner" id="nav"></div>
+</nav>
+
+<main id="menu"></main>
+
+<footer>
+  <strong>Domeniu Cheile Turzii</strong><br>
+  Vă mulțumim că ne-ați ales!
+</footer>
+
+<script>
+const categories = [
+  {id:"daily", title:{ro:"Meniul zilei",en:"Today’s menu",hu:"Napi menü"}, items:[
+    {ro:"Meniul zilei",en:"Today’s menu",hu:"Napi menü",price:"49 lei"}
+  ]},
+  {id:"soups", title:{ro:"Ciorbe",en:"Soups",hu:"Levesek"}, items:[
+    {ro:"Babgulyás „autentic” servit cu salată de ceapă",en:"Authentic Hungarian bean goulash served with onion salad",hu:"Hagyományos babgulyás hagymasalátával",desc:{ro:"Ciorbă ungurească de fasole cu ciolan afumat, kaiser și carne de porc.",en:"Hungarian bean soup with smoked pork knuckle, kaiser bacon and pork.",hu:"Füstölt csülökkel, kaiser szalonnával és sertéshússal."},price:"44 lei"},
+    {ro:"Ciorbă de burtă",en:"Tripe soup",hu:"Pacalleves",price:"36 lei"},
+    {ro:"Ciorbă à la grec de pui",en:"Greek-style chicken soup",hu:"Görögös csirkeraguleves",price:"36 lei"},
+    {ro:"Ciorbă țărănească de vită",en:"Traditional beef soup",hu:"Marhahúsos zöldségleves",price:"36 lei"},
+    {ro:"Ciorbă țărănească de legume",en:"Vegetable soup",hu:"Zöldségleves",price:"32 lei"},
+    {ro:"Supă cremă de ciuperci cu crutoane",en:"Cream of mushroom soup with croutons",hu:"Gombakrémleves pirított kenyérkockákkal",price:"32 lei"},
+    {ro:"Supă cremă de broccoli cu crutoane",en:"Cream of broccoli soup with croutons",hu:"Brokkolikrémleves pirított kenyérkockákkal",price:"32 lei"}
+  ]},
+  {id:"mains", title:{ro:"Preparate de bază",en:"Main dishes",hu:"Főételek"}, items:[
+    {ro:"Mici",en:"Grilled minced meat rolls",hu:"Mici",meta:"60 g",price:"9 lei"},
+    {ro:"Ceafă de porc la grătar",en:"Grilled pork neck",hu:"Grillezett sertéstarja",meta:"200 g",price:"32 lei"},
+    {ro:"Cârnăciori la grătar",en:"Grilled sausages",hu:"Grillezett kolbász",meta:"200 g",price:"32 lei"},
+    {ro:"Tocăniță de porc cu mămăliguță",en:"Pork stew with polenta",hu:"Sertéspörkölt puliszkával",meta:"300 g",price:"39 lei"},
+    {ro:"Piept de pui la grătar",en:"Grilled chicken breast",hu:"Grillezett csirkemell",meta:"200 g",price:"32 lei"},
+    {ro:"Șnițel din piept de pui",en:"Breaded chicken breast",hu:"Rántott csirkemell",meta:"200 g",price:"32 lei"},
+    {ro:"Crispy – aripioare de pui",en:"Crispy chicken wings",hu:"Ropogós csirkeszárny",meta:"200 g",price:"35 lei"},
+    {ro:"Strips din piept de pui",en:"Fried chicken strips",hu:"Rántott csirkemellcsíkok",meta:"200 g",price:"35 lei"},
+    {ro:"Papricaș de pui cu mămăliguță",en:"Chicken paprikash with polenta",hu:"Csirkepaprikás puliszkával",meta:"350 g",price:"41 lei"},
+    {ro:"Gulaș de vițel cu găluște și cartofi",en:"Beef goulash with dumplings and potatoes",hu:"Marhagulyás nokedlivel és burgonyával",meta:"~450 g",price:"64 lei"},
+    {ro:"Păstrăv cu mămăliguță și mujdei",en:"Trout with polenta and garlic sauce",hu:"Pisztráng puliszkával és fokhagymaszósszal",meta:"250–350 g / 300 g / 20 g",price:"64 lei"},
+    {ro:"Calamari pane cu cartofi wedges",en:"Breaded calamari with potato wedges",hu:"Rántott tintahalkarikák fűszeres burgonyával",meta:"200 g / 200 g",price:"59 lei"},
+    {ro:"Mămăliguță țărănească cu smântână, cașcaval și cârnăciori",en:"Polenta with sour cream, cheese and sausages",hu:"Puliszka tejföllel, sajttal és kolbásszal",meta:"400 g",price:"35 lei"},
+    {ro:"Cașcaval pane",en:"Breaded cheese",hu:"Rántott sajt",meta:"220 g",price:"32 lei"}
+  ]},
+  {id:"pasta", title:{ro:"Paste",en:"Pasta",hu:"Tészta"}, items:[
+    {ro:"Spaghete Carbonara",en:"Spaghetti Carbonara",hu:"Carbonara spagetti",meta:"300 g",price:"32 lei"},
+    {ro:"Spaghete Bolognese",en:"Spaghetti Bolognese",hu:"Bolognai spagetti",meta:"300 g",price:"32 lei"},
+    {ro:"Spaghete cu pesto",en:"Spaghetti with pesto",hu:"Pestós spagetti",meta:"300 g",price:"32 lei"}
+  ]},
+  {id:"sides", title:{ro:"Garnituri",en:"Side dishes",hu:"Köretek"}, items:[
+    {ro:"Cartofi prăjiți",en:"French fries",hu:"Sült krumpli",meta:"200 g",price:"12 lei"},
+    {ro:"Cartofi wedges",en:"Potato wedges",hu:"Fűszeres sült krumpli",meta:"200 g",price:"12 lei"},
+    {ro:"Piure de cartofi",en:"Mashed potatoes",hu:"Krumplipüré",meta:"180 g",price:"12 lei"}
+  ]},
+  {id:"salads", title:{ro:"Salate",en:"Salads",hu:"Saláták"}, items:[
+    {ro:"Salată asortată",en:"Mixed salad",hu:"Vegyes saláta",desc:{ro:"Roșii, castraveți și varză.",en:"Tomatoes, cucumbers and cabbage.",hu:"Paradicsom, uborka és káposzta."},price:"10 lei"},
+    {ro:"Salată de varză",en:"Cabbage salad",hu:"Káposztasaláta",price:"10 lei"},
+    {ro:"Salată de ceapă roșie",en:"Red onion salad",hu:"Liliahagyma-saláta",price:"10 lei"},
+    {ro:"Salată de murături",en:"Pickled vegetable salad",hu:"Savanyúságsaláta",price:"10 lei"}
+  ]},
+  {id:"sauces", title:{ro:"Sosuri",en:"Sauces",hu:"Szószok"}, items:[
+    {ro:"Ketchup",en:"Ketchup",hu:"Ketchup",meta:"40 g",price:"5 lei"},
+    {ro:"Maioneză",en:"Mayonnaise",hu:"Majonéz",meta:"40 g",price:"5 lei"},
+    {ro:"Mujdei",en:"Garlic sauce",hu:"Fokhagymaszósz",meta:"40 g",price:"6 lei"},
+    {ro:"Smântână",en:"Sour cream",hu:"Tejföl",meta:"40 g",price:"6 lei"},
+    {ro:"Ardei iute",en:"Hot pepper",hu:"Csípős paprika",meta:"1 buc.",price:"3 lei"}
+  ]},
+  {id:"desserts", title:{ro:"Desert",en:"Desserts",hu:"Desszertek"}, items:[
+    {ro:"Papanași cu dulceață de afine sau Nutella",en:"Cottage cheese doughnuts with blueberry jam or Nutella",hu:"Túrófánk áfonyalekvárral vagy Nutellával",price:"32 lei"},
+    {ro:"Gomboți cu prune și sos de iaurt cu fructe de pădure",en:"Plum dumplings with berry yogurt sauce",hu:"Szilvás gombóc erdei gyümölcsös joghurtszósszal",price:"29 lei"},
+    {ro:"Gomboți umpluți cu brânză de vacă și sos de iaurt cu fructe de pădure",en:"Dumplings filled with cottage cheese and berry yogurt sauce",hu:"Túrógombóc erdei gyümölcsös joghurtszósszal",price:"29 lei"},
+    {ro:"Lava Cake cu înghețată",en:"Lava cake with ice cream",hu:"Lávasüti fagylalttal",price:"32 lei"}
+  ]},
+  {id:"soft", title:{ro:"Răcoritoare",en:"Soft drinks",hu:"Üdítők"}, items:[
+    {ro:"Pepsi-Cola (Zero / Classic)",en:"Pepsi-Cola (Zero / Classic)",hu:"Pepsi-Cola (Zero / Classic)",meta:"500 ml",price:"14 lei"},
+    {ro:"Mirinda",en:"Mirinda",hu:"Mirinda",meta:"500 ml",price:"14 lei"},
+    {ro:"Sprite / 7UP",en:"Sprite / 7UP",hu:"Sprite / 7UP",meta:"500 ml",price:"14 lei"},
+    {ro:"Lipton Ice Tea",en:"Lipton Ice Tea",hu:"Lipton jeges tea",desc:{ro:"Lămâie, ceai verde, piersici sau zmeură.",en:"Lemon, green tea, peach or raspberry.",hu:"Citrom, zöld tea, őszibarack vagy málna."},meta:"500 ml",price:"14 lei"},
+    {ro:"Apă plată",en:"Still water",hu:"Szénsavmentes víz",meta:"500 ml",price:"10 lei"},
+    {ro:"Apă minerală",en:"Sparkling water",hu:"Szénsavas víz",meta:"500 ml",price:"10 lei"},
+    {ro:"Limonadă clasică",en:"Classic lemonade",hu:"Klasszikus limonádé",meta:"500 ml",price:"21 lei"},
+    {ro:"Limonadă cu mentă",en:"Mint lemonade",hu:"Mentás limonádé",meta:"500 ml",price:"21 lei"},
+    {ro:"Limonadă cu fructe de pădure",en:"Berry lemonade",hu:"Erdei gyümölcsös limonádé",meta:"500 ml",price:"24 lei"}
+  ]},
+  {id:"hot", title:{ro:"Băuturi calde",en:"Hot drinks",hu:"Meleg italok"}, items:[
+    {ro:"Espresso Julius Meinl",en:"Espresso Julius Meinl",hu:"Espresso Julius Meinl",price:"12 lei"},
+    {ro:"Espresso dublu Julius Meinl",en:"Double espresso Julius Meinl",hu:"Dupla espresso Julius Meinl",price:"18 lei"},
+    {ro:"Cappuccino Julius Meinl",en:"Cappuccino Julius Meinl",hu:"Cappuccino Julius Meinl",price:"16 lei"},
+    {ro:"Cappuccino vienez Julius Meinl",en:"Viennese cappuccino Julius Meinl",hu:"Bécsi cappuccino Julius Meinl",price:"17 lei"},
+    {ro:"Latte Macchiato Julius Meinl",en:"Latte Macchiato Julius Meinl",hu:"Latte Macchiato Julius Meinl",price:"19 lei"},
+    {ro:"Ciocolată caldă Julius Meinl",en:"Hot chocolate Julius Meinl",hu:"Forró csokoládé Julius Meinl",price:"12 lei"},
+    {ro:"Ice Coffee Julius Meinl",en:"Ice Coffee Julius Meinl",hu:"Jegeskávé Julius Meinl",price:"16 lei"},
+    {ro:"Frappe clasic Nestlé",en:"Classic frappe Nestlé",hu:"Klasszikus frappé Nestlé",price:"16 lei"},
+    {ro:"Flat White",en:"Flat White",hu:"Flat White",price:"20 lei"},
+    {ro:"Ceai Julius Meinl",en:"Tea Julius Meinl",hu:"Tea Julius Meinl",desc:{ro:"Mentă, fructe sau verde.",en:"Mint, fruit or green tea.",hu:"Menta, gyümölcs vagy zöld tea."},price:"12 lei"},
+    {ro:"Lapte barista pentru cafea",en:"Barista milk for coffee",hu:"Barista tej kávéhoz",price:"2 lei"},
+    {ro:"Miere la plic Julius Meinl",en:"Honey sachet Julius Meinl",hu:"Méz tasakban Julius Meinl",price:"3 lei"}
+  ]},
+  {id:"beer", title:{ro:"Bere",en:"Beer",hu:"Sör"}, items:[
+    {ro:"Tuborg draft",en:"Tuborg draft",hu:"Tuborg csapolt",meta:"400 ml",price:"15 lei"},
+    {ro:"Tuborg",en:"Tuborg",hu:"Tuborg",meta:"500 ml",price:"16 lei"},
+    {ro:"Tuborg fără alcool",en:"Tuborg non-alcoholic",hu:"Tuborg alkoholmentes",meta:"500 ml",price:"16 lei"},
+    {ro:"Radler fără alcool",en:"Radler non-alcoholic",hu:"Radler alkoholmentes",meta:"330 ml",price:"16 lei"},
+    {ro:"Carlsberg",en:"Carlsberg",hu:"Carlsberg",meta:"500 ml",price:"17 lei"},
+    {ro:"Corona Extra",en:"Corona Extra",hu:"Corona Extra",meta:"330 ml",price:"23 lei"}
+  ]},
+  {id:"wine", title:{ro:"Vin",en:"Wine",hu:"Bor"}, items:[
+    {ro:"Vin alb demisec la pahar",en:"Semi-dry white wine by the glass",hu:"Félszáraz fehérbor pohárban",meta:"200 ml",price:"16 lei"},
+    {ro:"Vin roșu demisec la pahar",en:"Semi-dry red wine by the glass",hu:"Félszáraz vörösbor pohárban",meta:"200 ml",price:"16 lei"},
+    {ro:"Vin roze demidulce la pahar",en:"Semi-sweet rosé wine by the glass",hu:"Félédes rozébor pohárban",meta:"200 ml",price:"16 lei"},
+    {ro:"Vin fiert cu rom Bacardi",en:"Mulled wine with Bacardi rum",hu:"Forralt bor Bacardi rummal",meta:"200 ml",price:"17 lei"},
+    {ro:"Vin fiert cu scorțișoară",en:"Mulled wine with cinnamon",hu:"Fahéjas forralt bor",meta:"200 ml",price:"17 lei"}
+  ]},
+  {id:"cocktails", title:{ro:"Cocktailuri",en:"Cocktails",hu:"Koktélok"}, items:[
+    {ro:"Aperol Spritz",en:"Aperol Spritz",hu:"Aperol Spritz",meta:"400 ml",price:"24 lei"},
+    {ro:"Hugo",en:"Hugo",hu:"Hugo",meta:"400 ml",price:"24 lei"},
+    {ro:"Campari Orange",en:"Campari Orange",hu:"Campari Orange",meta:"400 ml",price:"24 lei"},
+    {ro:"Gin Tonic",en:"Gin Tonic",hu:"Gin-tonik",meta:"400 ml",price:"24 lei"}
+  ]},
+  {id:"spirits", title:{ro:"Băuturi spirtoase",en:"Spirits",hu:"Röviditalok"}, items:[
+    {ro:"Vodka Absolut",en:"Absolut Vodka",hu:"Absolut vodka",meta:"50 ml",price:"16 lei"},
+    {ro:"Cognac Jidvei",en:"Jidvei Cognac",hu:"Jidvei konyak",meta:"50 ml",price:"16 lei"},
+    {ro:"Whisky Jack Daniel’s",en:"Jack Daniel’s Whisky",hu:"Jack Daniel’s whisky",meta:"50 ml",price:"16 lei"},
+    {ro:"Whisky Ballantine’s",en:"Ballantine’s Whisky",hu:"Ballantine’s whisky",meta:"50 ml",price:"16 lei"},
+    {ro:"Rom Bacardi",en:"Bacardi Rum",hu:"Bacardi rum",meta:"50 ml",price:"16 lei"},
+    {ro:"Campari",en:"Campari",hu:"Campari",meta:"50 ml",price:"16 lei"},
+    {ro:"Jägermeister",en:"Jägermeister",hu:"Jägermeister",meta:"50 ml",price:"16 lei"},
+    {ro:"Pălincă Zetea",en:"Zetea fruit brandy",hu:"Zetea pálinka",meta:"50 ml",price:"16 lei"}
+  ]}
+];
+
+const allergens = [
+"Cereale care conțin gluten și produse derivate",
+"Crustacee și produse derivate",
+"Ouă și produse derivate",
+"Pește și produse derivate",
+"Arahide și produse derivate",
+"Soia și produse derivate",
+"Lapte și produse derivate, inclusiv lactoză",
+"Fructe cu coajă și produse derivate",
+"Țelină și produse derivate",
+"Muștar și produse derivate",
+"Semințe de susan și produse derivate",
+"Dioxid de sulf și sulfiți în concentrații de peste 10 mg/kg sau 10 mg/l",
+"Lupin și produse derivate",
+"Moluște și produse derivate"
+];
+
+let currentLang="ro";
+const menu=document.getElementById("menu");
+const nav=document.getElementById("nav");
+const search=document.getElementById("search");
+
+const placeholders={
+  ro:"Caută un produs...",
+  en:"Search the menu...",
+  hu:"Keresés az étlapon..."
+};
+
+function render(){
+  const q=search.value.trim().toLowerCase();
+  nav.innerHTML="";
+  menu.innerHTML="";
+
+  categories.forEach(cat=>{
+    const filtered=cat.items.filter(item=>{
+      const text=[item.ro,item.en,item.hu,item.meta,item.price,item.desc?.ro,item.desc?.en,item.desc?.hu].join(" ").toLowerCase();
+      return !q || text.includes(q);
+    });
+    if(!filtered.length) return;
+
+    const link=document.createElement("a");
+    link.href="#"+cat.id;
+    link.textContent=cat.title[currentLang];
+    nav.appendChild(link);
+
+    const sec=document.createElement("section");
+    sec.className="category";
+    sec.id=cat.id;
+    sec.innerHTML=`<h2>${cat.title[currentLang]}</h2><div class="grid"></div>`;
+    const grid=sec.querySelector(".grid");
+
+    filtered.forEach(item=>{
+      const card=document.createElement("article");
+      card.className="card";
+      card.innerHTML=`
+        <div class="card-top">
+          <div class="name">${item[currentLang]}</div>
+          <div class="price">${item.price}</div>
+        </div>
+        ${item.meta?`<div class="meta">${item.meta}</div>`:""}
+        ${item.desc?`<div class="desc">${item.desc[currentLang]}</div>`:""}
+      `;
+      grid.appendChild(card);
+    });
+
+    menu.appendChild(sec);
+  });
+
+  const sec=document.createElement("section");
+  sec.className="category";
+  sec.id="allergens";
+  sec.innerHTML=`
+    <h2>${currentLang==="ro"?"Lista alergenilor":currentLang==="en"?"Allergen list":"Allergénlista"}</h2>
+    <div class="allergens">
+      <div>${currentLang==="ro"?"Informații disponibile la cerere. Lista generală a alergenilor:":currentLang==="en"?"Information available on request. General allergen list:":"Információ kérésre elérhető. Általános allergénlista:"}</div>
+      <ol>${allergens.map(a=>`<li>${a}</li>`).join("")}</ol>
+    </div>`;
+  menu.appendChild(sec);
+
+  const al=document.createElement("a");
+  al.href="#allergens";
+  al.textContent=currentLang==="ro"?"Alergeni":currentLang==="en"?"Allergens":"Allergének";
+  nav.appendChild(al);
+}
+
+document.querySelectorAll(".lang").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.querySelectorAll(".lang").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+    currentLang=btn.dataset.lang;
+    document.documentElement.lang=currentLang;
+    search.placeholder=placeholders[currentLang];
+    render();
+  });
+});
+
+search.addEventListener("input",render);
+render();
+</script>
+</body>
+</html>
