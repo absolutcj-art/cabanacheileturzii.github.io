@@ -214,6 +214,9 @@ footer{
       <button class="lang active" data-lang="ro">🇷🇴 Română</button>
       <button class="lang" data-lang="en">🇬🇧 English</button>
       <button class="lang" data-lang="hu">🇭🇺 Magyar</button>
+      <button class="lang" data-lang="de">🇩🇪 Deutsch</button>
+      <button class="lang" data-lang="cs">🇨🇿 Česky</button>
+      <button class="lang" data-lang="it">🇮🇹 Italiano</button>
     </div>
   </div>
   <div class="searchbar">
@@ -234,127 +237,127 @@ footer{
 
 <script>
 const categories = [
-  {id:"breakfast", title:{ro:"Mic dejun",en:"Breakfast",hu:"Reggeli"}, items:[
-    {ro:"Varianta 1",en:"Option 1",hu:"1. változat",desc:{ro:"Omletă sau ochiuri cu cașcaval și bacon, pâine și ceai, cafea, lapte sau ciocolată caldă.",en:"Omelette or fried eggs with cheese and bacon, bread and tea, coffee, milk or hot chocolate.",hu:"Omlett vagy tükörtojás sajttal és baconnel, kenyérrel, valamint tea, kávé, tej vagy forró csokoládé."},price:"39 lei"},
-    {ro:"Varianta 2",en:"Option 2",hu:"2. változat",desc:{ro:"Ouă fierte, brânză, cașcaval sau telemea, cârnăciori fierți, roșii, castraveți, pâine și ceai, cafea, lapte sau ciocolată caldă.",en:"Boiled eggs, cheese, boiled sausages, tomatoes, cucumbers, bread and tea, coffee, milk or hot chocolate.",hu:"Főtt tojás, sajt, főtt kolbász, paradicsom, uborka, kenyér, valamint tea, kávé, tej vagy forró csokoládé."},price:"39 lei"},
-    {ro:"Varianta 3",en:"Option 3",hu:"3. változat",desc:{ro:"Caș pane, cârnăciori prăjiți, roșii și cafea, ceai, lapte sau ciocolată caldă.",en:"Breaded cheese, fried sausages, tomatoes and coffee, tea, milk or hot chocolate.",hu:"Rántott sajt, sült kolbász, paradicsom, valamint kávé, tea, tej vagy forró csokoládé."},price:"39 lei"},
-    {ro:"Varianta 4",en:"Option 4",hu:"4. változat",desc:{ro:"Dulceață, Nutella sau Finetti, pâine în ou și cafea, ceai, lapte sau ciocolată caldă.",en:"Jam, Nutella or Finetti, French toast and coffee, tea, milk or hot chocolate.",hu:"Lekvár, Nutella vagy Finetti, bundás kenyér, valamint kávé, tea, tej vagy forró csokoládé."},price:"39 lei"}
+  {id:"breakfast", title:{ro:"Mic dejun",en:"Breakfast",hu:"Reggeli",de:"Frühstück",cs:"Snídaně",it:"Colazione"}, items:[
+    {ro:"Varianta 1",en:"Option 1",hu:"1. változat",de:"Variante 1",cs:"Varianta 1",it:"Opzione 1",desc:{ro:"Omletă sau ochiuri cu cașcaval și bacon, pâine și ceai, cafea, lapte sau ciocolată caldă.",en:"Omelette or fried eggs with cheese and bacon, bread and tea, coffee, milk or hot chocolate.",hu:"Omlett vagy tükörtojás sajttal és baconnel, kenyérrel, valamint tea, kávé, tej vagy forró csokoládé.",de:"Omelette or fried eggs with cheese and bacon, bread and tea, coffee, milk or hot chocolate.",cs:"Omelette or fried eggs with cheese and bacon, bread and tea, coffee, milk or hot chocolate.",it:"Omelette or fried eggs with cheese and bacon, bread and tea, coffee, milk or hot chocolate."},price:"39 lei"},
+    {ro:"Varianta 2",en:"Option 2",hu:"2. változat",de:"Variante 2",cs:"Varianta 2",it:"Opzione 2",desc:{ro:"Ouă fierte, brânză, cașcaval sau telemea, cârnăciori fierți, roșii, castraveți, pâine și ceai, cafea, lapte sau ciocolată caldă.",en:"Boiled eggs, cheese, boiled sausages, tomatoes, cucumbers, bread and tea, coffee, milk or hot chocolate.",hu:"Főtt tojás, sajt, főtt kolbász, paradicsom, uborka, kenyér, valamint tea, kávé, tej vagy forró csokoládé.",de:"Boiled eggs, cheese, boiled sausages, tomatoes, cucumbers, bread and tea, coffee, milk or hot chocolate.",cs:"Boiled eggs, cheese, boiled sausages, tomatoes, cucumbers, bread and tea, coffee, milk or hot chocolate.",it:"Boiled eggs, cheese, boiled sausages, tomatoes, cucumbers, bread and tea, coffee, milk or hot chocolate."},price:"39 lei"},
+    {ro:"Varianta 3",en:"Option 3",hu:"3. változat",de:"Variante 3",cs:"Varianta 3",it:"Opzione 3",desc:{ro:"Caș pane, cârnăciori prăjiți, roșii și cafea, ceai, lapte sau ciocolată caldă.",en:"Breaded cheese, fried sausages, tomatoes and coffee, tea, milk or hot chocolate.",hu:"Rántott sajt, sült kolbász, paradicsom, valamint kávé, tea, tej vagy forró csokoládé.",de:"Breaded cheese, fried sausages, tomatoes and coffee, tea, milk or hot chocolate.",cs:"Breaded cheese, fried sausages, tomatoes and coffee, tea, milk or hot chocolate.",it:"Breaded cheese, fried sausages, tomatoes and coffee, tea, milk or hot chocolate."},price:"39 lei"},
+    {ro:"Varianta 4",en:"Option 4",hu:"4. változat",de:"Variante 4",cs:"Varianta 4",it:"Opzione 4",desc:{ro:"Dulceață, Nutella sau Finetti, pâine în ou și cafea, ceai, lapte sau ciocolată caldă.",en:"Jam, Nutella or Finetti, French toast and coffee, tea, milk or hot chocolate.",hu:"Lekvár, Nutella vagy Finetti, bundás kenyér, valamint kávé, tea, tej vagy forró csokoládé.",de:"Jam, Nutella or Finetti, French toast and coffee, tea, milk or hot chocolate.",cs:"Jam, Nutella or Finetti, French toast and coffee, tea, milk or hot chocolate.",it:"Jam, Nutella or Finetti, French toast and coffee, tea, milk or hot chocolate."},price:"39 lei"}
   ]},
-  {id:"daily", title:{ro:"Meniul zilei",en:"Today’s menu",hu:"Napi menü"}, items:[
-    {ro:"Meniul zilei",en:"Today’s menu",hu:"Napi menü",price:"49 lei"}
+  {id:"daily", title:{ro:"Meniul zilei",en:"Today’s menu",hu:"Napi menü",de:"Tagesmenü",cs:"Denní menu",it:"Menù del giorno"}, items:[
+    {ro:"Meniul zilei",en:"Today’s menu",hu:"Napi menü",de:"Tagesmenü",cs:"Denní menu",it:"Menù del giorno",price:"49 lei"}
   ]},
-  {id:"soups", title:{ro:"Ciorbe",en:"Soups",hu:"Levesek"}, items:[
-    {ro:"Babgulyás „autentic” servit cu salată de ceapă",en:"Authentic Hungarian bean goulash served with onion salad",hu:"Hagyományos babgulyás hagymasalátával",desc:{ro:"Ciorbă ungurească de fasole cu ciolan afumat, kaiser și carne de porc.",en:"Hungarian bean soup with smoked pork knuckle, kaiser bacon and pork.",hu:"Füstölt csülökkel, kaiser szalonnával és sertéshússal."},price:"49 lei"},
-    {ro:"Ciorbă de burtă",en:"Tripe soup",hu:"Pacalleves",price:"36 lei"},
-    {ro:"Ciorbă à la grec de pui",en:"Greek-style chicken soup",hu:"Görögös csirkeraguleves",price:"36 lei"},
-    {ro:"Ciorbă țărănească de vită",en:"Traditional beef soup",hu:"Marhahúsos zöldségleves",price:"36 lei"},
-    {ro:"Ciorbă țărănească de legume",en:"Vegetable soup",hu:"Zöldségleves",price:"34 lei"},
-    {ro:"Supă cremă de ciuperci cu crutoane",en:"Cream of mushroom soup with croutons",hu:"Gombakrémleves pirított kenyérkockákkal",price:"34 lei"},
-    {ro:"Supă cremă de broccoli cu crutoane",en:"Cream of broccoli soup with croutons",hu:"Brokkolikrémleves pirított kenyérkockákkal",price:"34 lei"}
+  {id:"soups", title:{ro:"Ciorbe",en:"Soups",hu:"Levesek",de:"Suppen",cs:"Polévky",it:"Zuppe"}, items:[
+    {ro:"Babgulyás „autentic” servit cu salată de ceapă",en:"Authentic Hungarian bean goulash served with onion salad",hu:"Hagyományos babgulyás hagymasalátával",de:"Authentischer ungarischer Bohnengulasch mit Zwiebelsalat",cs:"Autentický maďarský fazolový guláš s cibulovým salátem",it:"Autentico gulasch ungherese di fagioli con insalata di cipolle",desc:{ro:"Ciorbă ungurească de fasole cu ciolan afumat, kaiser și carne de porc.",en:"Hungarian bean soup with smoked pork knuckle, kaiser bacon and pork.",hu:"Füstölt csülökkel, kaiser szalonnával és sertéshússal.",de:"Hungarian bean soup with smoked pork knuckle, kaiser bacon and pork.",cs:"Hungarian bean soup with smoked pork knuckle, kaiser bacon and pork.",it:"Hungarian bean soup with smoked pork knuckle, kaiser bacon and pork."},price:"49 lei"},
+    {ro:"Ciorbă de burtă",en:"Tripe soup",hu:"Pacalleves",de:"Kuttelsuppe",cs:"Dršťková polévka",it:"Zuppa di trippa",price:"36 lei"},
+    {ro:"Ciorbă à la grec de pui",en:"Greek-style chicken soup",hu:"Görögös csirkeraguleves",de:"Hühnersuppe nach griechischer Art",cs:"Kuřecí polévka na řecký způsob",it:"Zuppa di pollo alla greca",price:"36 lei"},
+    {ro:"Ciorbă țărănească de vită",en:"Traditional beef soup",hu:"Marhahúsos zöldségleves",de:"Traditionelle Rindfleischsuppe",cs:"Tradiční hovězí polévka",it:"Zuppa tradizionale di manzo",price:"36 lei"},
+    {ro:"Ciorbă țărănească de legume",en:"Vegetable soup",hu:"Zöldségleves",de:"Gemüsesuppe",cs:"Zeleninová polévka",it:"Zuppa di verdure",price:"34 lei"},
+    {ro:"Supă cremă de ciuperci cu crutoane",en:"Cream of mushroom soup with croutons",hu:"Gombakrémleves pirított kenyérkockákkal",de:"Pilzcremesuppe mit Croutons",cs:"Houbový krém s krutony",it:"Vellutata di funghi con crostini",price:"34 lei"},
+    {ro:"Supă cremă de broccoli cu crutoane",en:"Cream of broccoli soup with croutons",hu:"Brokkolikrémleves pirított kenyérkockákkal",de:"Brokkolicremesuppe mit Croutons",cs:"Brokolicový krém s krutony",it:"Vellutata di broccoli con crostini",price:"34 lei"}
   ]},
-  {id:"mains", title:{ro:"Preparate de bază",en:"Main dishes",hu:"Főételek"}, items:[
-    {ro:"Mici",en:"Grilled minced meat rolls",hu:"Mici",meta:"60 g",price:"9 lei"},
-    {ro:"Ceafă de porc la grătar",en:"Grilled pork neck",hu:"Grillezett sertéstarja",meta:"200 g",price:"35 lei"},
-    {ro:"Cârnăciori la grătar",en:"Grilled sausages",hu:"Grillezett kolbász",meta:"200 g",price:"32 lei"},
-    {ro:"Tocăniță de porc cu mămăliguță",en:"Pork stew with polenta",hu:"Sertéspörkölt puliszkával",meta:"300 g",price:"41 lei"},
-    {ro:"Piept de pui la grătar",en:"Grilled chicken breast",hu:"Grillezett csirkemell",meta:"200 g",price:"32 lei"},
-    {ro:"Șnițel din piept de pui",en:"Breaded chicken breast",hu:"Rántott csirkemell",meta:"200 g",price:"32 lei"},
-    {ro:"Crispy – aripioare de pui",en:"Crispy chicken wings",hu:"Ropogós csirkeszárny",meta:"200 g",price:"35 lei"},
-    {ro:"Strips din piept de pui",en:"Fried chicken strips",hu:"Rántott csirkemellcsíkok",meta:"200 g",price:"35 lei"},
-    {ro:"Papricaș de pui cu mămăliguță",en:"Chicken paprikash with polenta",hu:"Csirkepaprikás puliszkával",meta:"350 g",price:"41 lei"},
-    {ro:"Gulaș de vițel cu găluște și cartofi",en:"Beef goulash with dumplings and potatoes",hu:"Marhagulyás nokedlivel és burgonyával",meta:"~450 g",price:"67 lei"},
-    {ro:"Păstrăv cu mămăliguță și mujdei",en:"Trout with polenta and garlic sauce",hu:"Pisztráng puliszkával és fokhagymaszósszal",meta:"250–350 g / 300 g / 20 g",price:"67 lei"},
-    {ro:"Calamari pane cu cartofi wedges",en:"Breaded calamari with potato wedges",hu:"Rántott tintahalkarikák fűszeres burgonyával",meta:"200 g / 200 g",price:"59 lei"},
-    {ro:"Mămăliguță țărănească cu smântână, cașcaval și cârnăciori",en:"Polenta with sour cream, cheese and sausages",hu:"Puliszka tejföllel, sajttal és kolbásszal",meta:"400 g",price:"39 lei"},
-    {ro:"Cașcaval pane",en:"Breaded cheese",hu:"Rántott sajt",meta:"220 g",price:"32 lei"}
+  {id:"mains", title:{ro:"Preparate de bază",en:"Main dishes",hu:"Főételek",de:"Hauptgerichte",cs:"Hlavní jídla",it:"Piatti principali"}, items:[
+    {ro:"Mici",en:"Grilled minced meat rolls",hu:"Mici",de:"Gegrillte Hackfleischröllchen",cs:"Grilované válečky z mletého masa",it:"Involtini di carne macinata alla griglia",meta:"60 g",price:"9 lei"},
+    {ro:"Ceafă de porc la grătar",en:"Grilled pork neck",hu:"Grillezett sertéstarja",de:"Gegrillter Schweinenacken",cs:"Grilovaná vepřová krkovice",it:"Coppa di maiale alla griglia",meta:"200 g",price:"35 lei"},
+    {ro:"Cârnăciori la grătar",en:"Grilled sausages",hu:"Grillezett kolbász",de:"Gegrillte Würstchen",cs:"Grilované klobásky",it:"Salsicce alla griglia",meta:"200 g",price:"32 lei"},
+    {ro:"Tocăniță de porc cu mămăliguță",en:"Pork stew with polenta",hu:"Sertéspörkölt puliszkával",de:"Schweinegulasch mit Polenta",cs:"Vepřový guláš s polentou",it:"Spezzatino di maiale con polenta",meta:"300 g",price:"41 lei"},
+    {ro:"Piept de pui la grătar",en:"Grilled chicken breast",hu:"Grillezett csirkemell",de:"Gegrillte Hähnchenbrust",cs:"Grilovaná kuřecí prsa",it:"Petto di pollo alla griglia",meta:"200 g",price:"32 lei"},
+    {ro:"Șnițel din piept de pui",en:"Breaded chicken breast",hu:"Rántott csirkemell",de:"Hähnchenschnitzel",cs:"Kuřecí řízek",it:"Cotoletta di pollo impanata",meta:"200 g",price:"32 lei"},
+    {ro:"Crispy – aripioare de pui",en:"Crispy chicken wings",hu:"Ropogós csirkeszárny",de:"Knusprige Hähnchenflügel",cs:"Křupavá kuřecí křídla",it:"Alette di pollo croccanti",meta:"200 g",price:"35 lei"},
+    {ro:"Strips din piept de pui",en:"Fried chicken strips",hu:"Rántott csirkemellcsíkok",de:"Frittierte Hähnchenstreifen",cs:"Smažené kuřecí stripsy",it:"Straccetti di pollo fritti",meta:"200 g",price:"35 lei"},
+    {ro:"Papricaș de pui cu mămăliguță",en:"Chicken paprikash with polenta",hu:"Csirkepaprikás puliszkával",de:"Hähnchenpaprikasch mit Polenta",cs:"Kuřecí paprikáš s polentou",it:"Paprikash di pollo con polenta",meta:"350 g",price:"41 lei"},
+    {ro:"Gulaș de vițel cu găluște și cartofi",en:"Beef goulash with dumplings and potatoes",hu:"Marhagulyás nokedlivel és burgonyával",de:"Rindergulasch mit Nockerln und Kartoffeln",cs:"Hovězí guláš s noky a bramborami",it:"Gulasch di manzo con gnocchetti e patate",meta:"~450 g",price:"67 lei"},
+    {ro:"Păstrăv cu mămăliguță și mujdei",en:"Trout with polenta and garlic sauce",hu:"Pisztráng puliszkával és fokhagymaszósszal",de:"Forelle mit Polenta und Knoblauchsauce",cs:"Pstruh s polentou a česnekovou omáčkou",it:"Trota con polenta e salsa all'aglio",meta:"250–350 g / 300 g / 20 g",price:"67 lei"},
+    {ro:"Calamari pane cu cartofi wedges",en:"Breaded calamari with potato wedges",hu:"Rántott tintahalkarikák fűszeres burgonyával",de:"Panierte Calamari mit Kartoffel-Wedges",cs:"Smažené kalamáry s bramborovými měsíčky",it:"Calamari impanati con patate wedges",meta:"200 g / 200 g",price:"59 lei"},
+    {ro:"Mămăliguță țărănească cu smântână, cașcaval și cârnăciori",en:"Polenta with sour cream, cheese and sausages",hu:"Puliszka tejföllel, sajttal és kolbásszal",de:"Polenta mit Sauerrahm, Käse und Würstchen",cs:"Polenta se zakysanou smetanou, sýrem a klobáskami",it:"Polenta con panna acida, formaggio e salsicce",meta:"400 g",price:"39 lei"},
+    {ro:"Cașcaval pane",en:"Breaded cheese",hu:"Rántott sajt",de:"Panierter Käse",cs:"Smažený sýr",it:"Formaggio impanato",meta:"220 g",price:"32 lei"}
   ]},
-  {id:"pasta", title:{ro:"Paste",en:"Pasta",hu:"Tészta"}, items:[
-    {ro:"Spaghete Carbonara",en:"Spaghetti Carbonara",hu:"Carbonara spagetti",meta:"300 g",price:"35 lei"},
-    {ro:"Spaghete Bolognese",en:"Spaghetti Bolognese",hu:"Bolognai spagetti",meta:"300 g",price:"35 lei"},
-    {ro:"Spaghete cu pesto",en:"Spaghetti with pesto",hu:"Pestós spagetti",meta:"300 g",price:"35 lei"}
+  {id:"pasta", title:{ro:"Paste",en:"Pasta",hu:"Tészta",de:"Pasta",cs:"Těstoviny",it:"Pasta"}, items:[
+    {ro:"Spaghete Carbonara",en:"Spaghetti Carbonara",hu:"Carbonara spagetti",de:"Spaghetti Carbonara",cs:"Špagety Carbonara",it:"Spaghetti alla Carbonara",meta:"300 g",price:"35 lei"},
+    {ro:"Spaghete Bolognese",en:"Spaghetti Bolognese",hu:"Bolognai spagetti",de:"Spaghetti Bolognese",cs:"Špagety Bolognese",it:"Spaghetti alla Bolognese",meta:"300 g",price:"35 lei"},
+    {ro:"Spaghete cu pesto",en:"Spaghetti with pesto",hu:"Pestós spagetti",de:"Spaghetti mit Pesto",cs:"Špagety s pestem",it:"Spaghetti al pesto",meta:"300 g",price:"35 lei"}
   ]},
-  {id:"sides", title:{ro:"Garnituri",en:"Side dishes",hu:"Köretek"}, items:[
-    {ro:"Cartofi prăjiți",en:"French fries",hu:"Sült krumpli",meta:"200 g",price:"12 lei"},
-    {ro:"Cartofi wedges",en:"Potato wedges",hu:"Fűszeres sült krumpli",meta:"200 g",price:"12 lei"},
-    {ro:"Piure de cartofi",en:"Mashed potatoes",hu:"Krumplipüré",meta:"180 g",price:"12 lei"}
+  {id:"sides", title:{ro:"Garnituri",en:"Side dishes",hu:"Köretek",de:"Beilagen",cs:"Přílohy",it:"Contorni"}, items:[
+    {ro:"Cartofi prăjiți",en:"French fries",hu:"Sült krumpli",de:"Pommes frites",cs:"Hranolky",it:"Patatine fritte",meta:"200 g",price:"12 lei"},
+    {ro:"Cartofi wedges",en:"Potato wedges",hu:"Fűszeres sült krumpli",de:"Kartoffel-Wedges",cs:"Bramborové měsíčky",it:"Patate wedges",meta:"200 g",price:"12 lei"},
+    {ro:"Piure de cartofi",en:"Mashed potatoes",hu:"Krumplipüré",de:"Kartoffelpüree",cs:"Bramborová kaše",it:"Purè di patate",meta:"180 g",price:"12 lei"}
   ]},
-  {id:"salads", title:{ro:"Salate",en:"Salads",hu:"Saláták"}, items:[
-    {ro:"Salată asortată",en:"Mixed salad",hu:"Vegyes saláta",desc:{ro:"Roșii, castraveți și varză.",en:"Tomatoes, cucumbers and cabbage.",hu:"Paradicsom, uborka és káposzta."},price:"10 lei"},
-    {ro:"Salată de varză",en:"Cabbage salad",hu:"Káposztasaláta",price:"10 lei"},
-    {ro:"Salată de ceapă roșie",en:"Red onion salad",hu:"Liliahagyma-saláta",price:"10 lei"},
-    {ro:"Salată de murături",en:"Pickled vegetable salad",hu:"Savanyúságsaláta",price:"10 lei"}
+  {id:"salads", title:{ro:"Salate",en:"Salads",hu:"Saláták",de:"Salate",cs:"Saláty",it:"Insalate"}, items:[
+    {ro:"Salată asortată",en:"Mixed salad",hu:"Vegyes saláta",de:"Gemischter Salat",cs:"Míchaný salát",it:"Insalata mista",desc:{ro:"Roșii, castraveți și varză.",en:"Tomatoes, cucumbers and cabbage.",hu:"Paradicsom, uborka és káposzta.",de:"Tomatoes, cucumbers and cabbage.",cs:"Tomatoes, cucumbers and cabbage.",it:"Tomatoes, cucumbers and cabbage."},price:"10 lei"},
+    {ro:"Salată de varză",en:"Cabbage salad",hu:"Káposztasaláta",de:"Krautsalat",cs:"Zelný salát",it:"Insalata di cavolo",price:"10 lei"},
+    {ro:"Salată de ceapă roșie",en:"Red onion salad",hu:"Liliahagyma-saláta",de:"Roter Zwiebelsalat",cs:"Salát z červené cibule",it:"Insalata di cipolla rossa",price:"10 lei"},
+    {ro:"Salată de murături",en:"Pickled vegetable salad",hu:"Savanyúságsaláta",de:"Salat aus eingelegtem Gemüse",cs:"Salát z nakládané zeleniny",it:"Insalata di sottaceti",price:"10 lei"}
   ]},
-  {id:"sauces", title:{ro:"Sosuri",en:"Sauces",hu:"Szószok"}, items:[
-    {ro:"Ketchup",en:"Ketchup",hu:"Ketchup",meta:"40 g",price:"5 lei"},
-    {ro:"Maioneză",en:"Mayonnaise",hu:"Majonéz",meta:"40 g",price:"5 lei"},
-    {ro:"Mujdei",en:"Garlic sauce",hu:"Fokhagymaszósz",meta:"40 g",price:"6 lei"},
-    {ro:"Smântână",en:"Sour cream",hu:"Tejföl",meta:"40 g",price:"6 lei"},
-    {ro:"Ardei iute",en:"Hot pepper",hu:"Csípős paprika",meta:"1 buc.",price:"3 lei"}
+  {id:"sauces", title:{ro:"Sosuri",en:"Sauces",hu:"Szószok",de:"Saucen",cs:"Omáčky",it:"Salse"}, items:[
+    {ro:"Ketchup",en:"Ketchup",hu:"Ketchup",de:"Ketchup",cs:"Kečup",it:"Ketchup",meta:"40 g",price:"5 lei"},
+    {ro:"Maioneză",en:"Mayonnaise",hu:"Majonéz",de:"Mayonnaise",cs:"Majonéza",it:"Maionese",meta:"40 g",price:"5 lei"},
+    {ro:"Mujdei",en:"Garlic sauce",hu:"Fokhagymaszósz",de:"Knoblauchsauce",cs:"Česneková omáčka",it:"Salsa all'aglio",meta:"40 g",price:"6 lei"},
+    {ro:"Smântână",en:"Sour cream",hu:"Tejföl",de:"Sauerrahm",cs:"Zakysaná smetana",it:"Panna acida",meta:"40 g",price:"6 lei"},
+    {ro:"Ardei iute",en:"Hot pepper",hu:"Csípős paprika",de:"Scharfe Paprika",cs:"Pálivá paprika",it:"Peperoncino",meta:"1 buc.",price:"3 lei"}
   ]},
-  {id:"desserts", title:{ro:"Desert",en:"Desserts",hu:"Desszertek"}, items:[
-    {ro:"Kürtőskalács (Cozonac secuiesc)",en:"Chimney Cake",hu:"Kürtőskalács",desc:{ro:"Cu zahăr, nucă, scorțișoară sau cocos.",en:"Sugar, walnut, cinnamon or coconut.",hu:"Cukorral, dióval, fahéjjal vagy kókusszal."},price:"30 lei"},
-    {ro:"Papanași cu dulceață de afine sau Nutella",en:"Cottage cheese doughnuts with blueberry jam or Nutella",hu:"Túrófánk áfonyalekvárral vagy Nutellával",price:"32 lei"},
-    {ro:"Langoș",en:"Hungarian fried flatbread",hu:"Lángos",desc:{ro:"Cu smântână, telemea, usturoi, Nutella sau dulceață de caise, căpșuni ori prune.",en:"With sour cream, brined cheese, garlic, Nutella or apricot, strawberry or plum jam.",hu:"Tejföllel, juhtúróval, fokhagymával, Nutellával, sárgabarack-, eper- vagy szilvalekvárral."},price:"24 lei"},
-    {ro:"Gomboți cu prune și sos de iaurt cu fructe de pădure",en:"Plum dumplings with berry yogurt sauce",hu:"Szilvás gombóc erdei gyümölcsös joghurtszósszal",price:"29 lei"},
-    {ro:"Gomboți umpluți cu brânză de vacă și sos de iaurt cu fructe de pădure",en:"Dumplings filled with cottage cheese and berry yogurt sauce",hu:"Túrógombóc erdei gyümölcsös joghurtszósszal",price:"29 lei"},
-    {ro:"Lava Cake cu înghețată",en:"Lava Cake with ice cream",hu:"Lávatorta fagylalttal",price:"32 lei"}
+  {id:"desserts", title:{ro:"Desert",en:"Desserts",hu:"Desszertek",de:"Desserts",cs:"Dezerty",it:"Dolci"}, items:[
+    {ro:"Kürtőskalács (Cozonac secuiesc)",en:"Chimney Cake",hu:"Kürtőskalács",de:"Baumstriezel (Kürtőskalács)",cs:"Trdelník (Kürtőskalács)",it:"Kürtőskalács (dolce a camino)",desc:{ro:"Cu zahăr, nucă, scorțișoară sau cocos.",en:"Sugar, walnut, cinnamon or coconut.",hu:"Cukorral, dióval, fahéjjal vagy kókusszal.",de:"Sugar, walnut, cinnamon or coconut.",cs:"Sugar, walnut, cinnamon or coconut.",it:"Sugar, walnut, cinnamon or coconut."},price:"30 lei"},
+    {ro:"Papanași cu dulceață de afine sau Nutella",en:"Cottage cheese doughnuts with blueberry jam or Nutella",hu:"Túrófánk áfonyalekvárral vagy Nutellával",de:"Quarkkrapfen mit Heidelbeermarmelade oder Nutella",cs:"Tvarohové koblihy s borůvkovým džemem nebo Nutellou",it:"Frittelle di ricotta con marmellata di mirtilli o Nutella",price:"32 lei"},
+    {ro:"Langoș",en:"Hungarian fried flatbread",hu:"Lángos",de:"Lángos",cs:"Langoš",it:"Lángos",desc:{ro:"Cu smântână, telemea, usturoi, Nutella sau dulceață de caise, căpșuni ori prune.",en:"With sour cream, brined cheese, garlic, Nutella or apricot, strawberry or plum jam.",hu:"Tejföllel, juhtúróval, fokhagymával, Nutellával, sárgabarack-, eper- vagy szilvalekvárral.",de:"With sour cream, brined cheese, garlic, Nutella or apricot, strawberry or plum jam.",cs:"With sour cream, brined cheese, garlic, Nutella or apricot, strawberry or plum jam.",it:"With sour cream, brined cheese, garlic, Nutella or apricot, strawberry or plum jam."},price:"24 lei"},
+    {ro:"Gomboți cu prune și sos de iaurt cu fructe de pădure",en:"Plum dumplings with berry yogurt sauce",hu:"Szilvás gombóc erdei gyümölcsös joghurtszósszal",de:"Pflaumenknödel mit Waldfrucht-Joghurtsauce",cs:"Švestkové knedlíky s jogurtovou omáčkou z lesního ovoce",it:"Gnocchi dolci alle prugne con salsa allo yogurt e frutti di bosco",price:"29 lei"},
+    {ro:"Gomboți umpluți cu brânză de vacă și sos de iaurt cu fructe de pădure",en:"Dumplings filled with cottage cheese and berry yogurt sauce",hu:"Túrógombóc erdei gyümölcsös joghurtszósszal",de:"Mit Quark gefüllte Knödel mit Waldfrucht-Joghurtsauce",cs:"Knedlíky plněné tvarohem s jogurtovou omáčkou z lesního ovoce",it:"Gnocchi dolci ripieni di ricotta con salsa allo yogurt e frutti di bosco",price:"29 lei"},
+    {ro:"Lava Cake cu înghețată",en:"Lava Cake with ice cream",hu:"Lávatorta fagylalttal",de:"Lava Cake mit Eis",cs:"Lávový dort se zmrzlinou",it:"Lava Cake con gelato",price:"32 lei"}
   ]},
-  {id:"soft", title:{ro:"Răcoritoare",en:"Soft drinks",hu:"Üdítők"}, items:[
-    {ro:"Pepsi-Cola (Zero / Classic)",en:"Pepsi-Cola (Zero / Classic)",hu:"Pepsi-Cola (Zero / Classic)",meta:"500 ml",price:"15 lei"},
-    {ro:"Mirinda",en:"Mirinda",hu:"Mirinda",meta:"500 ml",price:"15 lei"},
-    {ro:"Sprite / 7UP",en:"Sprite / 7UP",hu:"Sprite / 7UP",meta:"500 ml",price:"15 lei"},
-    {ro:"Lipton Ice Tea",en:"Lipton Ice Tea",hu:"Lipton jeges tea",desc:{ro:"Lămâie, ceai verde, piersici sau zmeură.",en:"Lemon, green tea, peach or raspberry.",hu:"Citrom, zöld tea, őszibarack vagy málna."},meta:"500 ml",price:"15 lei"},
-    {ro:"Apă plată",en:"Still water",hu:"Szénsavmentes víz",meta:"500 ml",price:"10 lei"},
-    {ro:"Apă minerală",en:"Sparkling water",hu:"Szénsavas víz",meta:"500 ml",price:"10 lei"},
-    {ro:"Limonadă clasică",en:"Classic lemonade",hu:"Klasszikus limonádé",meta:"500 ml",price:"21 lei"},
-    {ro:"Limonadă cu mentă",en:"Mint lemonade",hu:"Mentás limonádé",meta:"500 ml",price:"21 lei"},
-    {ro:"Limonadă cu fructe de pădure",en:"Berry lemonade",hu:"Erdei gyümölcsös limonádé",meta:"500 ml",price:"24 lei"}
+  {id:"soft", title:{ro:"Răcoritoare",en:"Soft drinks",hu:"Üdítők",de:"Erfrischungsgetränke",cs:"Nealkoholické nápoje",it:"Bibite analcoliche"}, items:[
+    {ro:"Pepsi-Cola (Zero / Classic)",en:"Pepsi-Cola (Zero / Classic)",hu:"Pepsi-Cola (Zero / Classic)",de:"Pepsi-Cola (Zero / Classic)",cs:"Pepsi-Cola (Zero / Classic)",it:"Pepsi-Cola (Zero / Classic)",meta:"500 ml",price:"15 lei"},
+    {ro:"Mirinda",en:"Mirinda",hu:"Mirinda",de:"Mirinda",cs:"Mirinda",it:"Mirinda",meta:"500 ml",price:"15 lei"},
+    {ro:"Sprite / 7UP",en:"Sprite / 7UP",hu:"Sprite / 7UP",de:"Sprite / 7UP",cs:"Sprite / 7UP",it:"Sprite / 7UP",meta:"500 ml",price:"15 lei"},
+    {ro:"Lipton Ice Tea",en:"Lipton Ice Tea",hu:"Lipton jeges tea",de:"Lipton Ice Tea",cs:"Lipton Ice Tea",it:"Lipton Ice Tea",desc:{ro:"Lămâie, ceai verde, piersici sau zmeură.",en:"Lemon, green tea, peach or raspberry.",hu:"Citrom, zöld tea, őszibarack vagy málna.",de:"Lemon, green tea, peach or raspberry.",cs:"Lemon, green tea, peach or raspberry.",it:"Lemon, green tea, peach or raspberry."},meta:"500 ml",price:"15 lei"},
+    {ro:"Apă plată",en:"Still water",hu:"Szénsavmentes víz",de:"Stilles Wasser",cs:"Neperlivá voda",it:"Acqua naturale",meta:"500 ml",price:"10 lei"},
+    {ro:"Apă minerală",en:"Sparkling water",hu:"Szénsavas víz",de:"Mineralwasser",cs:"Perlivá voda",it:"Acqua frizzante",meta:"500 ml",price:"10 lei"},
+    {ro:"Limonadă clasică",en:"Classic lemonade",hu:"Klasszikus limonádé",de:"Klassische Limonade",cs:"Klasická limonáda",it:"Limonata classica",meta:"500 ml",price:"21 lei"},
+    {ro:"Limonadă cu mentă",en:"Mint lemonade",hu:"Mentás limonádé",de:"Minzlimonade",cs:"Mátová limonáda",it:"Limonata alla menta",meta:"500 ml",price:"21 lei"},
+    {ro:"Limonadă cu fructe de pădure",en:"Berry lemonade",hu:"Erdei gyümölcsös limonádé",de:"Waldfruchtlimonade",cs:"Limonáda z lesního ovoce",it:"Limonata ai frutti di bosco",meta:"500 ml",price:"24 lei"}
   ]},
-  {id:"hot", title:{ro:"Băuturi calde",en:"Hot drinks",hu:"Meleg italok"}, items:[
-    {ro:"Espresso Julius Meinl",en:"Espresso Julius Meinl",hu:"Espresso Julius Meinl",price:"12 lei"},
-    {ro:"Espresso dublu Julius Meinl",en:"Double espresso Julius Meinl",hu:"Dupla espresso Julius Meinl",price:"18 lei"},
-    {ro:"Cappuccino Julius Meinl",en:"Cappuccino Julius Meinl",hu:"Cappuccino Julius Meinl",price:"16 lei"},
-    {ro:"Cappuccino vienez Julius Meinl",en:"Viennese cappuccino Julius Meinl",hu:"Bécsi cappuccino Julius Meinl",price:"17 lei"},
-    {ro:"Latte Macchiato Julius Meinl",en:"Latte Macchiato Julius Meinl",hu:"Latte Macchiato Julius Meinl",price:"19 lei"},
-    {ro:"Ciocolată caldă Julius Meinl",en:"Hot chocolate Julius Meinl",hu:"Forró csokoládé Julius Meinl",price:"12 lei"},
-    {ro:"Ice Coffee Julius Meinl",en:"Ice Coffee Julius Meinl",hu:"Jegeskávé Julius Meinl",price:"16 lei"},
-    {ro:"Frappe clasic Nestlé",en:"Classic frappe Nestlé",hu:"Klasszikus frappé Nestlé",price:"16 lei"},
-    {ro:"Flat White",en:"Flat White",hu:"Flat White",price:"20 lei"},
-    {ro:"Ceai Julius Meinl",en:"Tea Julius Meinl",hu:"Tea Julius Meinl",desc:{ro:"Mentă, fructe sau verde.",en:"Mint, fruit or green tea.",hu:"Menta, gyümölcs vagy zöld tea."},price:"12 lei"},
-    {ro:"Lapte barista pentru cafea",en:"Barista milk for coffee",hu:"Barista tej kávéhoz",price:"2 lei"},
-    {ro:"Miere la plic Julius Meinl",en:"Honey sachet Julius Meinl",hu:"Méz tasakban Julius Meinl",price:"3 lei"}
+  {id:"hot", title:{ro:"Băuturi calde",en:"Hot drinks",hu:"Meleg italok",de:"Heißgetränke",cs:"Teplé nápoje",it:"Bevande calde"}, items:[
+    {ro:"Espresso Julius Meinl",en:"Espresso Julius Meinl",hu:"Espresso Julius Meinl",de:"Espresso Julius Meinl",cs:"Espresso Julius Meinl",it:"Espresso Julius Meinl",price:"12 lei"},
+    {ro:"Espresso dublu Julius Meinl",en:"Double espresso Julius Meinl",hu:"Dupla espresso Julius Meinl",de:"Doppelter Espresso Julius Meinl",cs:"Dvojité espresso Julius Meinl",it:"Espresso doppio Julius Meinl",price:"18 lei"},
+    {ro:"Cappuccino Julius Meinl",en:"Cappuccino Julius Meinl",hu:"Cappuccino Julius Meinl",de:"Cappuccino Julius Meinl",cs:"Cappuccino Julius Meinl",it:"Cappuccino Julius Meinl",price:"16 lei"},
+    {ro:"Cappuccino vienez Julius Meinl",en:"Viennese cappuccino Julius Meinl",hu:"Bécsi cappuccino Julius Meinl",de:"Wiener Cappuccino Julius Meinl",cs:"Vídeňské cappuccino Julius Meinl",it:"Cappuccino viennese Julius Meinl",price:"17 lei"},
+    {ro:"Latte Macchiato Julius Meinl",en:"Latte Macchiato Julius Meinl",hu:"Latte Macchiato Julius Meinl",de:"Latte Macchiato Julius Meinl",cs:"Latte Macchiato Julius Meinl",it:"Latte Macchiato Julius Meinl",price:"19 lei"},
+    {ro:"Ciocolată caldă Julius Meinl",en:"Hot chocolate Julius Meinl",hu:"Forró csokoládé Julius Meinl",de:"Heiße Schokolade Julius Meinl",cs:"Horká čokoláda Julius Meinl",it:"Cioccolata calda Julius Meinl",price:"12 lei"},
+    {ro:"Ice Coffee Julius Meinl",en:"Ice Coffee Julius Meinl",hu:"Jegeskávé Julius Meinl",de:"Ice Coffee Julius Meinl",cs:"Ice Coffee Julius Meinl",it:"Ice Coffee Julius Meinl",price:"16 lei"},
+    {ro:"Frappe clasic Nestlé",en:"Classic frappe Nestlé",hu:"Klasszikus frappé Nestlé",de:"Frappe clasic Nestlé",cs:"Frappe clasic Nestlé",it:"Frappe clasic Nestlé",price:"16 lei"},
+    {ro:"Flat White",en:"Flat White",hu:"Flat White",de:"Flat White",cs:"Flat White",it:"Flat White",price:"20 lei"},
+    {ro:"Ceai Julius Meinl",en:"Tea Julius Meinl",hu:"Tea Julius Meinl",de:"Tee Julius Meinl",cs:"Čaj Julius Meinl",it:"Tè Julius Meinl",desc:{ro:"Mentă, fructe sau verde.",en:"Mint, fruit or green tea.",hu:"Menta, gyümölcs vagy zöld tea.",de:"Mint, fruit or green tea.",cs:"Mint, fruit or green tea.",it:"Mint, fruit or green tea."},price:"12 lei"},
+    {ro:"Lapte barista pentru cafea",en:"Barista milk for coffee",hu:"Barista tej kávéhoz",de:"Barista-Milch für Kaffee",cs:"Baristické mléko do kávy",it:"Latte barista per caffè",price:"2 lei"},
+    {ro:"Miere la plic Julius Meinl",en:"Honey sachet Julius Meinl",hu:"Méz tasakban Julius Meinl",de:"Honigportion Julius Meinl",cs:"Med v sáčku Julius Meinl",it:"Bustina di miele Julius Meinl",price:"3 lei"}
   ]},
-  {id:"beer", title:{ro:"Bere",en:"Beer",hu:"Sör"}, items:[
-    {ro:"Tuborg draft",en:"Tuborg draft",hu:"Tuborg csapolt",meta:"400 ml",price:"15 lei"},
-    {ro:"Tuborg",en:"Tuborg",hu:"Tuborg",meta:"500 ml",price:"16 lei"},
-    {ro:"Tuborg fără alcool",en:"Tuborg non-alcoholic",hu:"Tuborg alkoholmentes",meta:"500 ml",price:"16 lei"},
-    {ro:"Radler fără alcool",en:"Radler non-alcoholic",hu:"Radler alkoholmentes",meta:"330 ml",price:"16 lei"},
-    {ro:"Carlsberg",en:"Carlsberg",hu:"Carlsberg",meta:"500 ml",price:"17 lei"},
-    {ro:"Carlsberg fără alcool",en:"Carlsberg non-alcoholic",hu:"Carlsberg alkoholmentes",meta:"500 ml",price:"17 lei"},
-    {ro:"Corona Extra",en:"Corona Extra",hu:"Corona Extra",meta:"330 ml",price:"23 lei"}
+  {id:"beer", title:{ro:"Bere",en:"Beer",hu:"Sör",de:"Bier",cs:"Pivo",it:"Birra"}, items:[
+    {ro:"Tuborg draft",en:"Tuborg draft",hu:"Tuborg csapolt",de:"Tuborg draft",cs:"Tuborg draft",it:"Tuborg draft",meta:"400 ml",price:"15 lei"},
+    {ro:"Tuborg",en:"Tuborg",hu:"Tuborg",de:"Tuborg",cs:"Tuborg",it:"Tuborg",meta:"500 ml",price:"16 lei"},
+    {ro:"Tuborg fără alcool",en:"Tuborg non-alcoholic",hu:"Tuborg alkoholmentes",de:"Tuborg alkoholfrei",cs:"Tuborg nealkoholické",it:"Tuborg analcolica",meta:"500 ml",price:"16 lei"},
+    {ro:"Radler fără alcool",en:"Radler non-alcoholic",hu:"Radler alkoholmentes",de:"Radler alkoholfrei",cs:"Radler nealkoholický",it:"Radler analcolica",meta:"330 ml",price:"16 lei"},
+    {ro:"Carlsberg",en:"Carlsberg",hu:"Carlsberg",de:"Carlsberg",cs:"Carlsberg",it:"Carlsberg",meta:"500 ml",price:"17 lei"},
+    {ro:"Carlsberg fără alcool",en:"Carlsberg non-alcoholic",hu:"Carlsberg alkoholmentes",de:"Carlsberg alkoholfrei",cs:"Carlsberg nealkoholický",it:"Carlsberg analcolica",meta:"500 ml",price:"17 lei"},
+    {ro:"Corona Extra",en:"Corona Extra",hu:"Corona Extra",de:"Corona Extra",cs:"Corona Extra",it:"Corona Extra",meta:"330 ml",price:"23 lei"}
   ]},
-  {id:"wine", title:{ro:"Vin",en:"Wine",hu:"Bor"}, items:[
-    {ro:"Vin alb demisec la pahar",en:"Semi-dry white wine by the glass",hu:"Félszáraz fehérbor pohárban",meta:"200 ml",price:"16 lei"},
-    {ro:"Vin roșu demisec la pahar",en:"Semi-dry red wine by the glass",hu:"Félszáraz vörösbor pohárban",meta:"200 ml",price:"16 lei"},
-    {ro:"Vin roze demidulce la pahar",en:"Semi-sweet rosé wine by the glass",hu:"Félédes rozébor pohárban",meta:"200 ml",price:"16 lei"},
-    {ro:"Vin fiert cu rom Bacardi",en:"Mulled wine with Bacardi rum",hu:"Forralt bor Bacardi rummal",meta:"200 ml",price:"17 lei"},
-    {ro:"Vin fiert cu scorțișoară",en:"Mulled wine with cinnamon",hu:"Fahéjas forralt bor",meta:"200 ml",price:"17 lei"}
+  {id:"wine", title:{ro:"Vin",en:"Wine",hu:"Bor",de:"Wein",cs:"Víno",it:"Vino"}, items:[
+    {ro:"Vin alb demisec la pahar",en:"Semi-dry white wine by the glass",hu:"Félszáraz fehérbor pohárban",de:"Halbtrockener Weißwein im Glas",cs:"Polosuché bílé víno – sklenka",it:"Vino bianco semisecco al bicchiere",meta:"200 ml",price:"16 lei"},
+    {ro:"Vin roșu demisec la pahar",en:"Semi-dry red wine by the glass",hu:"Félszáraz vörösbor pohárban",de:"Halbtrockener Rotwein im Glas",cs:"Polosuché červené víno – sklenka",it:"Vino rosso semisecco al bicchiere",meta:"200 ml",price:"16 lei"},
+    {ro:"Vin roze demidulce la pahar",en:"Semi-sweet rosé wine by the glass",hu:"Félédes rozébor pohárban",de:"Halbsüßer Roséwein im Glas",cs:"Polosladké růžové víno – sklenka",it:"Vino rosé semidolce al bicchiere",meta:"200 ml",price:"16 lei"},
+    {ro:"Vin fiert cu rom Bacardi",en:"Mulled wine with Bacardi rum",hu:"Forralt bor Bacardi rummal",de:"Glühwein mit Bacardi Rum",cs:"Svařené víno s rumem Bacardi",it:"Vin brulé con rum Bacardi",meta:"200 ml",price:"17 lei"},
+    {ro:"Vin fiert cu scorțișoară",en:"Mulled wine with cinnamon",hu:"Fahéjas forralt bor",de:"Glühwein mit Zimt",cs:"Svařené víno se skořicí",it:"Vin brulé alla cannella",meta:"200 ml",price:"17 lei"}
   ]},
-  {id:"cocktails", title:{ro:"Cocktailuri",en:"Cocktails",hu:"Koktélok"}, items:[
-    {ro:"Aperol Spritz",en:"Aperol Spritz",hu:"Aperol Spritz",meta:"400 ml",price:"26 lei"},
-    {ro:"Hugo",en:"Hugo",hu:"Hugo",meta:"400 ml",price:"26 lei"},
-    {ro:"Campari Orange",en:"Campari Orange",hu:"Campari Orange",meta:"400 ml",price:"26 lei"},
-    {ro:"Gin Tonic",en:"Gin Tonic",hu:"Gin-tonik",meta:"400 ml",price:"26 lei"}
+  {id:"cocktails", title:{ro:"Cocktailuri",en:"Cocktails",hu:"Koktélok",de:"Cocktails",cs:"Koktejly",it:"Cocktail"}, items:[
+    {ro:"Aperol Spritz",en:"Aperol Spritz",hu:"Aperol Spritz",de:"Aperol Spritz",cs:"Aperol Spritz",it:"Aperol Spritz",meta:"400 ml",price:"26 lei"},
+    {ro:"Hugo",en:"Hugo",hu:"Hugo",de:"Hugo",cs:"Hugo",it:"Hugo",meta:"400 ml",price:"26 lei"},
+    {ro:"Campari Orange",en:"Campari Orange",hu:"Campari Orange",de:"Campari Orange",cs:"Campari Orange",it:"Campari Orange",meta:"400 ml",price:"26 lei"},
+    {ro:"Gin Tonic",en:"Gin Tonic",hu:"Gin-tonik",de:"Gin Tonic",cs:"Gin Tonic",it:"Gin Tonic",meta:"400 ml",price:"26 lei"}
   ]},
-  {id:"spirits", title:{ro:"Băuturi spirtoase",en:"Spirits",hu:"Röviditalok"}, items:[
-    {ro:"Vodka Absolut",en:"Absolut Vodka",hu:"Absolut vodka",meta:"50 ml",price:"16 lei"},
-    {ro:"Cognac Jidvei",en:"Jidvei Cognac",hu:"Jidvei konyak",meta:"50 ml",price:"16 lei"},
-    {ro:"Whisky Jack Daniel’s",en:"Jack Daniel’s Whisky",hu:"Jack Daniel’s whisky",meta:"50 ml",price:"16 lei"},
-    {ro:"Whisky Ballantine’s",en:"Ballantine’s Whisky",hu:"Ballantine’s whisky",meta:"50 ml",price:"16 lei"},
-    {ro:"Rom Bacardi",en:"Bacardi Rum",hu:"Bacardi rum",meta:"50 ml",price:"16 lei"},
-    {ro:"Campari",en:"Campari",hu:"Campari",meta:"50 ml",price:"16 lei"},
-    {ro:"Jägermeister",en:"Jägermeister",hu:"Jägermeister",meta:"50 ml",price:"16 lei"},
-    {ro:"Pălincă Zetea",en:"Zetea fruit brandy",hu:"Zetea pálinka",meta:"50 ml",price:"16 lei"}
+  {id:"spirits", title:{ro:"Băuturi spirtoase",en:"Spirits",hu:"Röviditalok",de:"Spirituosen",cs:"Destiláty",it:"Distillati"}, items:[
+    {ro:"Vodka Absolut",en:"Absolut Vodka",hu:"Absolut vodka",de:"Vodka Absolut",cs:"Vodka Absolut",it:"Vodka Absolut",meta:"50 ml",price:"16 lei"},
+    {ro:"Cognac Jidvei",en:"Jidvei Cognac",hu:"Jidvei konyak",de:"Cognac Jidvei",cs:"Cognac Jidvei",it:"Cognac Jidvei",meta:"50 ml",price:"16 lei"},
+    {ro:"Whisky Jack Daniel’s",en:"Jack Daniel’s Whisky",hu:"Jack Daniel’s whisky",de:"Whisky Jack Daniel’s",cs:"Whisky Jack Daniel’s",it:"Whisky Jack Daniel’s",meta:"50 ml",price:"16 lei"},
+    {ro:"Whisky Ballantine’s",en:"Ballantine’s Whisky",hu:"Ballantine’s whisky",de:"Whisky Ballantine’s",cs:"Whisky Ballantine’s",it:"Whisky Ballantine’s",meta:"50 ml",price:"16 lei"},
+    {ro:"Rom Bacardi",en:"Bacardi Rum",hu:"Bacardi rum",de:"Rom Bacardi",cs:"Rom Bacardi",it:"Rom Bacardi",meta:"50 ml",price:"16 lei"},
+    {ro:"Campari",en:"Campari",hu:"Campari",de:"Campari",cs:"Campari",it:"Campari",meta:"50 ml",price:"16 lei"},
+    {ro:"Jägermeister",en:"Jägermeister",hu:"Jägermeister",de:"Jägermeister",cs:"Jägermeister",it:"Jägermeister",meta:"50 ml",price:"16 lei"},
+    {ro:"Pălincă Zetea",en:"Zetea fruit brandy",hu:"Zetea pálinka",de:"Zetea Pálinka",cs:"Pálenka Zetea",it:"Pálinka Zetea",meta:"50 ml",price:"16 lei"}
   ]}
 ];
 
@@ -383,7 +386,10 @@ const search=document.getElementById("search");
 const placeholders={
   ro:"Caută un produs...",
   en:"Search the menu...",
-  hu:"Keresés az étlapon..."
+  hu:"Keresés az étlapon...",
+  de:"Menü durchsuchen...",
+  cs:"Hledat v menu...",
+  it:"Cerca nel menù..."
 };
 
 function render(){
@@ -393,7 +399,7 @@ function render(){
 
   categories.forEach(cat=>{
     const filtered=cat.items.filter(item=>{
-      const text=[item.ro,item.en,item.hu,item.meta,item.price,item.desc?.ro,item.desc?.en,item.desc?.hu].join(" ").toLowerCase();
+      const text=[item.ro,item.en,item.hu,item.de,item.cs,item.it,item.meta,item.price,item.desc?.ro,item.desc?.en,item.desc?.hu,item.desc?.de,item.desc?.cs,item.desc?.it].join(" ").toLowerCase();
       return !q || text.includes(q);
     });
     if(!filtered.length) return;
@@ -430,16 +436,16 @@ function render(){
   sec.className="category";
   sec.id="allergens";
   sec.innerHTML=`
-    <h2>${currentLang==="ro"?"Lista alergenilor":currentLang==="en"?"Allergen list":"Allergénlista"}</h2>
+    <h2>${({ro:"Lista alergenilor",en:"Allergen list",hu:"Allergénlista",de:"Allergenliste",cs:"Seznam alergenů",it:"Elenco allergeni"})[currentLang]}</h2>
     <div class="allergens">
-      <div>${currentLang==="ro"?"Informații disponibile la cerere. Lista generală a alergenilor:":currentLang==="en"?"Information available on request. General allergen list:":"Információ kérésre elérhető. Általános allergénlista:"}</div>
+      <div>${({ro:"Informații disponibile la cerere. Lista generală a alergenilor:",en:"Information available on request. General allergen list:",hu:"Információ kérésre elérhető. Általános allergénlista:",de:"Informationen auf Anfrage erhältlich. Allgemeine Allergenliste:",cs:"Informace jsou k dispozici na vyžádání. Obecný seznam alergenů:",it:"Informazioni disponibili su richiesta. Elenco generale degli allergeni:"})[currentLang]}</div>
       <ol>${allergens.map(a=>`<li>${a}</li>`).join("")}</ol>
     </div>`;
   menu.appendChild(sec);
 
   const al=document.createElement("a");
   al.href="#allergens";
-  al.textContent=currentLang==="ro"?"Alergeni":currentLang==="en"?"Allergens":"Allergének";
+  al.textContent=({ro:"Alergeni",en:"Allergens",hu:"Allergének",de:"Allergene",cs:"Alergeny",it:"Allergeni"})[currentLang];
   nav.appendChild(al);
 }
 
